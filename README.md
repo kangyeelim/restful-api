@@ -15,7 +15,7 @@ $ mongo --version
 # The version number should be returned
 ```
 
-* Replace <URL> in index.js with 'mongodb://localhost/restful-api'
+* Replace URL in index.js with 'mongodb://localhost/restful-api'
 
 ```bash
 # Run
