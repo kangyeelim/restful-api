@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
-mongoose.connect('mongodb://localhost/restful-api', { useNewUrlParser: true});
+mongoose.connect(<URL>, { useNewUrlParser: true});
 
 var db = mongoose.connection;
 
@@ -23,7 +23,7 @@ if(!db)
 else
     console.log("Db connected successfully");
 
-app.get('/', (req, res) => res.send("Hello World!"));
+app.get('/', (req, res) => res.send("Welcome to the quotes API!"));
 
 let apiRoutes = require("./api-routes");
 app.use('/api', apiRoutes);
