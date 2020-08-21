@@ -13,6 +13,9 @@ $ cd restful-api
 # Check mongo is downloaded 
 $ mongo --version
 # The version number should be returned
+
+# Get all dependencies
+$ npm install
 ```
 
 * Replace URL in index.js with 'mongodb://localhost/restful-api'
