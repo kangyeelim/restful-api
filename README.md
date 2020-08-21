@@ -18,7 +18,8 @@ $ mongo --version
 $ npm install
 ```
 
-* Replace URL in index.js with 'mongodb://localhost/restful-api'
+* Create a .env file in root directory
+* Add URL=mongodb://localhost/restful-api in the .env file
 
 ```bash
 # Run

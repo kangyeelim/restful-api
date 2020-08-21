@@ -6,6 +6,12 @@ let bodyParser = require('body-parser');
 
 let mongoose = require('mongoose');
 
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+const MONGO_URL = process.env.URL;
+
 app.use(bodyParser.urlencoded({
    extended: true
 }));
@@ -14,7 +20,7 @@ app.use(bodyParser.json());
 
 var port = process.env.PORT || 8080;
 
-mongoose.connect(<URL>, { useNewUrlParser: true});
+mongoose.connect(MONGO_URL, { useNewUrlParser: true});
 
 var db = mongoose.connection;
 
