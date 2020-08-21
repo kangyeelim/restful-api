@@ -6,9 +6,7 @@ let bodyParser = require('body-parser');
 
 let mongoose = require('mongoose');
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
+require('dotenv').config();
 
 const MONGO_URL = process.env.URL;
 
