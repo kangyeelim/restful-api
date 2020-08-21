@@ -27,4 +27,22 @@ $ node index
 ```
 
 * Go to http://localhost:8080/
-* Send GET, POST, DELETE etc to the API using postman/insomnia etc or the browswer
+* Send GET, POST, DELETE etc to the API using postman/insomnia etc
+* Eg. GET http://localhost:8080/api/quotes
+* Eg. POST http://localhost:8080/api/quotes with json object 
+```
+{
+	"message": "One loyal friend is worth ten thousand relatives.",
+	"category": "Friendship"
+}
+```
+* Eg. DELETE http://localhost:8080/api/quotes/{quote_id} 
+* Eg. PATCH http://localhost:8080/api/quotes/{quote_id} with json object
+* Eg. PUT http://localhost:8080/api/quotes/{quote_id} with json object
+* Eg. GET http://localhost:8080/api/quotes/{quote_id}
+
+## To run API on deployed endpoints
+
+* Go to https://restful-quote-api.herokuapp.com/ 
+* Send GET, POST, DELETE etc to the API using postman/insomnia etc
+* Instead of http://localhost:8080/, use https://restful-quote-api.herokuapp.com/  

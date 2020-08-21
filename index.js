@@ -27,7 +27,7 @@ if(!db)
 else
     console.log("Db connected successfully");
 
-app.get('/', (req, res) => res.send("Welcome to the quotes API!"));
+app.get('/', (req, res) => res.send("Welcome to the quotes API! Refer to the instructions in https://github.com/kangyeelim/restful-api to use the API."));
 
 let apiRoutes = require("./api-routes");
 app.use('/api', apiRoutes);
