@@ -14,6 +14,12 @@ router.route('/quotes')
     .get(quoteController.index)
     .post(quoteController.new);
 
+router.route('/seed/quotes')
+  .get(quoteController.getAllQuotes);
+
+router.route('/seed/quotes/:id')
+  .get(quoteController.getSingleQuote);
+
 router.route('/quotes/:quote_id')
     .get(quoteController.view)
     .patch(quoteController.update)
