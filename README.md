@@ -9,6 +9,7 @@ This is the repository for task B1.
 $ git clone this repository
 
 $ cd restful-api
+$ cd backend
 
 # Check mongo is downloaded
 $ mongo --version
@@ -22,7 +23,7 @@ $ npm install
 
 ```bash
 # Run
-$ node index
+$ npm run dev
 ```
 
 * Go to http://localhost:8080/
@@ -45,3 +46,15 @@ $ node index
 * Go to https://restful-quote-api.herokuapp.com/
 * Send GET, POST, DELETE etc to the API using postman/insomnia etc
 * Instead of http://localhost:8080/, use https://restful-quote-api.herokuapp.com/  
+
+## To run tests locally
+
+```bash
+# Clone repo
+
+$ cd restful-api
+$ cd backend
+
+# Get all dependencies
+$ npm run test
+```
