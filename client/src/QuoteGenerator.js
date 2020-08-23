@@ -69,7 +69,7 @@ class QuoteGenerator extends React.Component {
           <h3 className="subtitle">Generate quotes based on a category</h3>
           <Form>
             <Form.Row className="align-items-center">
-              <Form.Label style={{marginRight: 50}}>
+              <Form.Label style={{marginRight: 10}}>
                 Category:
               </Form.Label>
               <Col>
