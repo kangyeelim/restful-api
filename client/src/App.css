@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+.subtitle {
+  color: purple;
+  margin-top: 40px;
+}
+
+.home-image {
+  max-width: 300px;
+  max-height: 400px;
+}
+
+#home-image-3 {
+  margin-top: 60px;
+}
+
+Form {
+  margin-top: 20px;
+}
