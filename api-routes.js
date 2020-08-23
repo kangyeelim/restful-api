@@ -20,6 +20,9 @@ router.route('/seed/quotes')
 router.route('/seed/quotes/:id')
   .get(quoteController.getSingleQuote);
 
+router.route('/quotes/by/:category')
+  .get(quoteController.getByCategory);
+
 router.route('/quotes/:quote_id')
     .get(quoteController.view)
     .patch(quoteController.update)

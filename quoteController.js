@@ -97,6 +97,19 @@ exports.delete = function (req, res) {
               status: "success",
               message: 'Quote deleted'
           });
-        }      
+        }
     });
 };
+
+exports.getByCategory = function (req, res) {
+  var query = {};
+  query["category"] = req.params.category;
+  console.log(req.params.category);
+  Quote.find(query)
+    .limit(200)
+    .then(entries => res.json({
+      status: "success",
+      data: entries
+    }))
+    .catch(err => res.send(err));
+}
