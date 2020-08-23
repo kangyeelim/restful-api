@@ -2,14 +2,13 @@
 
 # dependencies
 /node_modules
-/backend/node_modules
 /client/node_modules
 
 # production
 /build
 
 # misc
-/backend/.env
+.env
 .DS_Store
 
 npm-debug.log*
