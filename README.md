@@ -1,5 +1,8 @@
+[![Build Status](https://travis-ci.com/kangyeelim/restful-api.svg?branch=master)](https://travis-ci.com/kangyeelim/restful-api)
+
 # restful-api
-This is the repository for task B1.
+This is the repository for task B1. It is a quotes API.
+Each quote has a message (the quote itself) and a category.
 
 ## To run API locally
 * Ensure mongoDB is downloaded in your computer
@@ -42,7 +45,7 @@ $ npm run dev
 * Eg. PUT http://localhost:8080/api/quotes/{quote_id} with json object
 * Eg. GET http://localhost:8080/api/quotes/{quote_id}
 
-## To run API on deployed endpoints
+## To run API on deployed endpoints (not working...)
 
 * Go to https://restful-quote-api.herokuapp.com/
 * Send GET, POST, DELETE etc to the API using postman/insomnia etc
@@ -62,3 +65,16 @@ $ npm run test
 ## Travis run tests
 
 * Travis runs the tests according to the package.json script for test
+
+## To run frontend web application to interact with API
+
+```bash
+# Go to folder directory with the react app
+$ cd client
+
+# Get all dependencies
+$ npm install
+
+# Run frontend web apple
+$ npm start
+```
