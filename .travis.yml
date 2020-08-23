@@ -7,3 +7,10 @@ cache:
 services: mongodb
 before_script:
   - cd backend && npm install
+deploy:
+  provider: lambda
+  function_name: "quote-api"
+  region: "us-east-1"
+  role: "arn:aws:iam::691058995710:role/service-role/clcd-dev"
+  runtime: "nodejs4.3"
+  handler_name: "handler"
