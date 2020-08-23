@@ -54,7 +54,6 @@ $ npm run dev
 # Clone repo
 
 $ cd restful-api
-$ cd backend
 
 # Get all dependencies
 $ npm run test
