@@ -8,7 +8,7 @@ let mongoose = require('mongoose');
 
 require('dotenv').config();
 
-const MONGO_URL = 'mongodb://localhost/restful-api';
+const MONGO_URL = process.env.URL;
 
 app.use(bodyParser.urlencoded({
    extended: true
