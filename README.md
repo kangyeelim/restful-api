@@ -58,3 +58,7 @@ $ cd restful-api
 # Get all dependencies
 $ npm run test
 ```
+
+## Travis run tests
+
+* Travis runs the tests according to the package.json script for test

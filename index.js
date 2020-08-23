@@ -1,5 +1,7 @@
 let express = require('express');
 
+let cors = require('cors');
+
 let app = express();
 
 let bodyParser = require('body-parser');
@@ -7,6 +9,8 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 
 require('dotenv').config();
+
+app.use(cors());
 
 const MONGO_URL = process.env.URL;
 
