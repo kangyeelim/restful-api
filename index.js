@@ -8,6 +8,8 @@ let bodyParser = require('body-parser');
 
 let mongoose = require('mongoose');
 
+let serverless = require('serverless-http');
+
 require('dotenv').config();
 
 app.use(cors());
@@ -44,4 +46,8 @@ app.listen(port, function() {
   console.log("Running restful-api on port " + port);
 })
 
-module.exports = app;
+if (process.env.NODE_ENV === 'production') {
+  module.exports.handler = serverless(app);
+} else {
+  module.exports = app;
+}
