@@ -12,7 +12,11 @@ require('dotenv').config();
 
 app.use(cors());
 
-const MONGO_URL = process.env.URL;
+var MONGO_URL = process.env.URL;
+
+if (process.env.NODE_ENV === 'production') {
+  MONGO_URL = process.env.ATLAS_URL;
+}
 
 app.use(bodyParser.urlencoded({
    extended: true

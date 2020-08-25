@@ -13,3 +13,5 @@ deploy:
   runtime: "nodejs12.x"
   handler_name: "handler"
   timeout: 10
+  env:
+    NODE_ENV=production
