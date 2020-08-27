@@ -8,8 +8,6 @@ let bodyParser = require('body-parser');
 
 let mongoose = require('mongoose');
 
-let serverless = require('serverless-http');
-
 require('dotenv').config();
 
 app.use(cors());
@@ -42,12 +40,10 @@ app.get('/', (req, res) => res.send("Welcome to the quotes API! Refer to the ins
 let apiRoutes = require("./api-routes");
 app.use('/api', apiRoutes);
 
-app.listen(port, function() {
-  console.log("Running restful-api on port " + port);
-})
-
-if (process.env.NODE_ENV === 'production') {
-  module.exports.handler = serverless(app);
-} else {
-  module.exports = app;
+if (process.env.NODE_ENV === 'development') {
+  app.listen(port, function() {
+    console.log("Running restful-api on port " + port);
+  })
 }
+
+module.exports = app;
