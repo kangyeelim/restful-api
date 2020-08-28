@@ -5,11 +5,3 @@ cache:
   directories:
     - "node_modules"
 services: mongodb
-deploy:
-  provider: lambda
-  function_name: "quote-api"
-  region: "us-east-2"
-  role: "arn:aws:iam::654673036772:role/lambda-basic"
-  runtime: "nodejs12.x"
-  handler_name: "handler"
-  timeout: 10

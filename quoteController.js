@@ -71,14 +71,14 @@ exports.update = function (req, res) {
         }
 
         quote.message = req.body.message ? req.body.message : quote.message;
-        quote.category = req.body.category;
+        quote.category = req.body.category? req.body.category : quote.category;
         // save the quote and check for errors
         quote.save(function (err) {
             if (err) {
               res.json(err);
             } else {
               res.json({
-                  message: 'Contact Info updated',
+                  message: 'Quote Info updated',
                   data: quote
               });
             }
@@ -94,7 +94,6 @@ exports.delete = function (req, res) {
           res.send(err);
         } else {
           res.json({
-              status: "success",
               message: 'Quote deleted'
           });
         }
