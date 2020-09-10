@@ -5,4 +5,3 @@ cache:
   directories:
     - "node_modules"
 services: mongodb
-before_install: openssl aes-256-cbc -K $encrypted_61e4ad73ff60_key -iv $encrypted_61e4ad73ff60_iv -in quote-api-287712-f46ec037eef7.json.enc -out quote-api-287712-f46ec037eef7.json -d
