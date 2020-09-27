@@ -24,6 +24,7 @@ $ npm install
 
 * Create a .env file in the root directory
 * Add URL=mongodb://localhost/restful-api in the .env file
+* Add NODE_ENV=development
 
 ```bash
 # Run
@@ -75,6 +76,6 @@ $ cd client
 # Get all dependencies
 $ npm install
 
-# Run frontend web apple
+# Run frontend web application
 $ npm start
 ```
