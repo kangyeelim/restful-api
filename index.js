@@ -1,3 +1,5 @@
+const serverless = require('serverless-http');
+
 let express = require('express');
 
 let cors = require('cors');
@@ -46,4 +48,4 @@ if (process.env.NODE_ENV === 'development') {
   })
 }
 
-module.exports = app;
+module.exports.handler = serverless(app);
