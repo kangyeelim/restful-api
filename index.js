@@ -39,6 +39,13 @@ else
 
 app.get('/', (req, res) => res.send("Welcome to the quotes API! Refer to the instructions in https://github.com/kangyeelim/restful-api to use the API."));
 
+app.use( (req, res, next) => {
+   res.header("Access-Control-Allow-Origin", "*")
+   res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS")
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+   next();
+ })
+
 let apiRoutes = require("./api-routes");
 app.use('/api', apiRoutes);
 
