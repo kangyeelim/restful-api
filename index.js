@@ -46,6 +46,7 @@ if (process.env.NODE_ENV === 'development') {
   app.listen(port, function() {
     console.log("Running restful-api on port " + port);
   })
+  module.exports = app;
+} else {
+  module.exports.handler = serverless(app);
 }
-
-module.exports.handler = serverless(app);
