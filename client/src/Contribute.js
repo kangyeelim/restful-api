@@ -19,16 +19,18 @@ class Contribute extends React.Component {
   setQuote(e) {
     var message = e.target.value;
     this.setState({message: message});
+    this.setState({didSubmit: false});
   }
 
   setCategory(e) {
     var category = e.currentTarget.value;
     this.setState({category: category});
+    this.setState({didSubmit: false});
   }
 
   async submit() {
     if (this.state.message !== null && this.state.category !== null) {
-      var response = await axios.post('http://localhost:8080/api/quotes/', {
+      var response = await axios.post('https://3nbbh9oobe.execute-api.us-east-2.amazonaws.com/default/api/quotes/', {
         message: this.state.message,
         category: this.state.category
       })

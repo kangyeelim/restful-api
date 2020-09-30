@@ -44,7 +44,7 @@ class QuoteGenerator extends React.Component {
 }
   async generate() {
     if (this.state.category !== null) {
-      var response = await axios.get(`http://localhost:8080/api/quotes/by/${this.state.category}`);
+      var response = await axios.get(`https://3nbbh9oobe.execute-api.us-east-2.amazonaws.com/default/api/quotes/by/${this.state.category}`);
       var array = response.data.data;
       this.shuffle(array);
       this.setState({quotes: array});
@@ -54,8 +54,9 @@ class QuoteGenerator extends React.Component {
   async randomlyGenerate() {
     var random_index = Math.floor(Math.random() * 8);
     var random_category = categories[random_index];
-    var response = await axios.get(`http://localhost:8080/api/quotes/by/${random_category}`);
+    var response = await axios.get(`https://3nbbh9oobe.execute-api.us-east-2.amazonaws.com/default/api/quotes/by/${random_category}`);
     var quotes = response.data.data;
+    console.log(quotes.length);
     random_index = Math.floor(Math.random() * quotes.length);
     var singleQuoteArr = [];
     singleQuoteArr.push(quotes[random_index]);
