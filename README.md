@@ -12,7 +12,6 @@ Each quote has a message (the quote itself) and a category.
 $ git clone this repository
 
 $ cd restful-api
-$ cd backend
 
 # Check mongo is downloaded
 $ mongo --version
