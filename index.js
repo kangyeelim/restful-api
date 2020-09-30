@@ -55,5 +55,5 @@ if (process.env.NODE_ENV === 'development') {
   })
   module.exports = app;
 } else {
-  module.exports.handler = serverless(app);
+  module.exports.handler = serverless(app, { callbackWaitsForEmptyEventLoop: false });
 }
