@@ -9,8 +9,22 @@ router.get('/', function(req, res) {
 
 // Import quotes controller
 let quoteController = require('./quoteController');
+let Quote = require('./quoteModel');
+
 // Contact routes
-router.get('/quotes', quoteController.index);
+router.get('/quotes', function (req, res) {
+    Quote.get(function (err, quotes) {
+        if (err) {
+            res.send(err);
+        }
+        res.json({
+            status: "success",
+            message: "Quotes retrieved successfully",
+            data: quotes
+        });
+    });
+});
+
 router.post('/quotes', quoteController.new);
 
 router.get('/seed/quotes', quoteController.getAllQuotes);
