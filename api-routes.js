@@ -8,25 +8,20 @@ router.get('/', function(req, res) {
 });
 
 // Import quotes controller
-var quoteController = require('./quoteController');
+let quoteController = require('./quoteController');
 // Contact routes
-router.route('/quotes')
-    .get(quoteController.index)
-    .post(quoteController.new);
+router.get('/quotes', quoteController.index);
+router.post('/quotes', quoteController.new);
 
-router.route('/seed/quotes')
-  .get(quoteController.getAllQuotes);
+router.get('/seed/quotes', quoteController.getAllQuotes);
 
-router.route('/seed/quotes/:id')
-  .get(quoteController.getSingleQuote);
+router.get('/seed/quotes/:id', quoteController.getSingleQuote)
 
-router.route('/quotes/by/:category')
-  .get(quoteController.getByCategory);
+router.get('/quotes/by/:category', quoteController.getByCategory);
 
-router.route('/quotes/:quote_id')
-    .get(quoteController.view)
-    .patch(quoteController.update)
-    .put(quoteController.update)
-    .delete(quoteController.delete);
+router.get('/quotes/:quote_id', quoteController.view);
+router.patch('/quotes/:quote_id', quoteController.update);
+router.put('/quotes/:quote_id', quoteController.update);
+router.delete('/quotes/:quote_id', quoteController.delete);
 
 module.exports = router;
