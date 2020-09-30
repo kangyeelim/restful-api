@@ -46,11 +46,10 @@ $ npm run dev
 * Eg. PUT http://localhost:8080/api/quotes/{quote_id} with json object
 * Eg. GET http://localhost:8080/api/quotes/{quote_id}
 
-## To run API on deployed endpoints (not working...)
+## To run API on deployed endpoints
 
-* Go to https://restful-quote-api.herokuapp.com/
+* Go to https://3nbbh9oobe.execute-api.us-east-2.amazonaws.com/default/api/quotes/
 * Send GET, POST, DELETE etc to the API using postman/insomnia etc
-* Instead of http://localhost:8080/, use https://restful-quote-api.herokuapp.com/  
 
 ## To run tests locally
 
